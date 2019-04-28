@@ -28,8 +28,6 @@ belongs_to :group
 |Column|Type|optipn|
 |------|----|------|
 |title|string|null:falls|
-|user|reference|null:falls,foreign_key:true|
-|messages|reference|null:falls,foreign_key:true|
 
 ### Association
 has_many :messages

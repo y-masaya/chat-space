@@ -16,10 +16,13 @@
         color: $light_gray;
         font-size: 12px;
         margin-top: 15px;
-        .member {
-          display: inline-block;
-          padding-right: 5px;
+        .ul {
+          margin: 0;
         }
+          li {
+          display: inline-block;
+          margin-right: 5px;
+          }
       }
     }
     .right-header {

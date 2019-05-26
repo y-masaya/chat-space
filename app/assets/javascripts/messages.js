@@ -37,7 +37,7 @@ $(document).on('turbolinks:load', function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html).animate({scrollTop: $('.messages')[0].scrollHeight }, 500, 'swing');
-      $('#new_message')[0].reset();
+      $('#new_message')[0].reset(); //resetはidを選択している。form自体を選択しているので、hiddenなど指定する必要はない。idの場合は＃をつけてclassの場合は.をつける
     })
     .always(function(data){
       $('.form__submit').prop('disabled', false); //ここで解除している

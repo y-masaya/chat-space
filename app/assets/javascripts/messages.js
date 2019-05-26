@@ -37,8 +37,8 @@ $(document).on('turbolinks:load', function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html).animate({scrollTop: $('.messages')[0].scrollHeight }, 500, 'swing');
-      $('.form__message').val('');
-      $('.hidden').val('');
+      $('#new_message')[0].reset();
+      $('#hidden')[0].reset();
     })
     .always(function(data){
       $('.form__submit').prop('disabled', false); //ここで解除している
@@ -46,14 +46,6 @@ $(document).on('turbolinks:load', function(){
     .fail(function(){
       alert("送信したテキストを表示できません。リロードしてください");
     })
-
     return false;
   })
-
-
-
-
-
-
-
 });

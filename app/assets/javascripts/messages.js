@@ -38,7 +38,6 @@ $(document).on('turbolinks:load', function(){
       var html = buildHTML(data);
       $('.messages').append(html).animate({scrollTop: $('.messages')[0].scrollHeight }, 500, 'swing');
       $('#new_message')[0].reset();
-      $('#hidden')[0].reset();
     })
     .always(function(data){
       $('.form__submit').prop('disabled', false); //ここで解除している

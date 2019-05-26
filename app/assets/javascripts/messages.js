@@ -14,7 +14,7 @@ $(document).on('turbolinks:load', function(){
         ${message.created_at}
         </div>
       </div>
-      <div class="lower-meesage">
+      <div class="lower-message">
         <p class="lower-message__content">${message.content}</p>
         ${add_image}
       </div>

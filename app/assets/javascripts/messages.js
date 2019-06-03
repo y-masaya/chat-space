@@ -66,9 +66,9 @@ $(document).on('turbolinks:load', function(){
         });
     })
     .fail(function() {
-      console.log('error');
+      alert("リロードしてください");
     });
   };
 
-  setInterval(reloadMessages, 5000);
+  setInterval(reloadMessages, 2000);
 });

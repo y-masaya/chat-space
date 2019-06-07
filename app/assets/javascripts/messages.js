@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+$(function(){
   function buildHTML(message){
     var add_image ="";
     if(message.image){

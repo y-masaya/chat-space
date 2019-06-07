@@ -49,7 +49,8 @@ $(function(){
   });
 
 
-  var reloadMessages = function() {
+  var reloadMessages = setInterval(function() {
+    if(window.location.pathname.match(/\groups\/\d+\/messages/)) {
     last_message_id = $('.message').last().data('message-id');
     group_id = $('.message').last().data('group-id');
     $.ajax({
@@ -68,7 +69,10 @@ $(function(){
     .fail(function() {
       alert("リロードしてください");
     });
-  };
-
-  setInterval(reloadMessages, 2000);
+  
+  
+  } else {
+    clearInterval(interval);
+  }
+  },5000);
 });
